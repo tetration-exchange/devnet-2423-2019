@@ -152,3 +152,10 @@ def get_inactive_sensors(sensors):
 
 # establish a global connection
 rc = connect()
+
+# step 1 - get the sensor details
+sensors = get_sensors()
+print "All sensors: "
+for sensor in sensors.values():
+    print " ", sensor["hostname"]
+

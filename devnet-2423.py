@@ -181,3 +181,8 @@ for policy in app['policies']:
 # step 5 - get the ips that match the filter (policy entry) "Inactive Sensors"
 filter_members = get_filter_members(FILTER_ID)
 
+# step 6 - loop through the matching filter members 
+print "\n\nThe filter", filter_members["name"], "has the following members"
+for member in filter_members["results"]:
+    print "{: <20} {: <16} inactive={: <10}".format(
+        member['host_name'], member['ip'], member['user_inactive'])

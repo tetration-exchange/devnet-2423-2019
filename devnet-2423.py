@@ -178,3 +178,6 @@ print "\n\nThe application", app['name'], "has the following policies:"
 for policy in app['policies']:
     print "{:5}  {:20} --> {:15}".format(policy['action'], policy['consumer_filter_name'], policy[ 'provider_filter_name'])
 
+# step 5 - get the ips that match the filter (policy entry) "Inactive Sensors"
+filter_members = get_filter_members(FILTER_ID)
+

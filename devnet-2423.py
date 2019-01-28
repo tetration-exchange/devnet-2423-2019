@@ -169,3 +169,7 @@ for sensor in sensors:
         print "   marking interface inactive: {: <16} ✅".format(
             interface['ip'])
         mark_as_inactive(interface["ip"])
+
+# step 3 - get the application policy
+app = get_application(APP_ID)
+
